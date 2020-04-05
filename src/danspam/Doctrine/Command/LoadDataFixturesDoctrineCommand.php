@@ -84,6 +84,8 @@ EOT
         foreach ($paths as $path) {
             if (is_dir($path)) {
                 $loader->loadFromDirectory($path);
+            } else {
+                $loader->loadFromFile($path);
             }
         }
 
